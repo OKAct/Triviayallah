@@ -29,6 +29,7 @@ public class Dbquestion{
   public Dbquestion(String type,String difficulty,String category,String  question,String correct_answer){
 
     this.type=type;
+    this.difficulty=difficulty;
     this.category=category;
     this.question=question;
     this.correct_answer=correct_answer;

@@ -1,4 +1,17 @@
+
+FROM gradle:9.5-jdk25 AS build
+
+COPY . .
+
+RUN gradle build 
+
+
 FROM eclipse-temurin:25
-ARG JAR_FILE=build/libs/*.jar
-COPY ${JAR_FILE} app.jar
+
+WORKDIR /app
+
+COPY --from=build /app/build/libs/*.jar app.jar
+
+
 ENTRYPOINT ["java","-jar","/app.jar"]
+

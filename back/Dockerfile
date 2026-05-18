@@ -1,6 +1,8 @@
 
 FROM gradle:9.5-jdk25 AS build
 
+WORKDIR /app
+
 COPY . .
 
 RUN ./gradlew build -x test

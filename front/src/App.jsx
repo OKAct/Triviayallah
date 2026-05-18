@@ -11,7 +11,7 @@ function App() {
   const [check,changeCheck]=useState("true");
 
 const get_ques= async ()=>{
-  const resp=await fetch("https://triviayallah-1.onrender.com")
+  const resp=await fetch("https://triviayallah-1.onrender.com/easy")
 
   const ream=await resp.text();
 

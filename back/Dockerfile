@@ -3,7 +3,7 @@ FROM gradle:9.5-jdk25 AS build
 
 COPY . .
 
-RUN gradle build 
+RUN ./gradlew build 
 
 
 FROM eclipse-temurin:25
